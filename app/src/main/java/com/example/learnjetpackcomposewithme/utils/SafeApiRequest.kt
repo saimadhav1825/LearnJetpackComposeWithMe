@@ -1,16 +1,12 @@
 package com.example.learnjetpackcomposewithme.utils
 
-import android.net.http.HttpException
-import io.ktor.utils.io.errors.IOException
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import okhttp3.Response
-import okhttp3.ResponseBody
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class SafeApiRequest @Inject constructor(
 
-){/*
+) {/*
     // repos to handle api errors.
     suspend fun <T> safeApiCall(apiToBeCalled: suspend () -> ApiResult<T>): ApiResult<T> {
 

@@ -24,6 +24,7 @@ class WhetherViewModel @Inject constructor(
 
     private val _whetherChannel = Channel<WhetherEvents>()
     val whetherChannel = _whetherChannel.receiveAsFlow()
+
     fun onAction(actions: WhetherActions) {
         when (actions) {
             is WhetherActions.Details -> {

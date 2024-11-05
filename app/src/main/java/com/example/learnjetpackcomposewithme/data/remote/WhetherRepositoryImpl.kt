@@ -6,9 +6,9 @@ import com.example.learnjetpackcomposewithme.utils.ApiResult
 import com.example.learnjetpackcomposewithme.utils.SafeApiRequest
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
 
-class WhetherRepositoryImpl(
-    private val apiService: ApiService,
+class WhetherRepositoryImpl @Inject constructor(
     private val safeApiRequest: SafeApiRequest
 ) : WhetherRepository {
     override suspend fun getWhetherList(): Flow<ApiResult<List<User>>> = flow {
