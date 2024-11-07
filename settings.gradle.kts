@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "LearnJetPackComposeWithMe"
 include(":app")
- 
+include(":benchmark")

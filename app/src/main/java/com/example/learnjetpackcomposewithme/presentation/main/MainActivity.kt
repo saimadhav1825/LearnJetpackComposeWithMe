@@ -21,6 +21,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContent {
             val viewModel: MainViewModel = hiltViewModel()
             installSplashScreen().apply {
@@ -28,7 +29,7 @@ class MainActivity : ComponentActivity() {
                     viewModel.isLoading.value
                 }
             }
-            enableEdgeToEdge()
+
             LearnJetPackComposeWithMeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Text(
