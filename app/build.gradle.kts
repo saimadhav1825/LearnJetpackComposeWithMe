@@ -4,7 +4,8 @@ plugins {
     alias(libs.plugins.kotlinAndroidKsp)
     alias(libs.plugins.hiltAndroid)
     alias(libs.plugins.compose.compiler)
-
+    alias(libs.plugins.jetbrains.kotlin.serialization)
+    id("kotlin-parcelize") // needed only for non-primitive classes
 }
 
 android {
@@ -101,5 +102,9 @@ dependencies {
     implementation(libs.androidx.core.splashscreen)
 
     implementation(libs.androidx.profileinstaller.v131)
+
+    //navigation
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
 
 }
